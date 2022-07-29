@@ -1,0 +1,30 @@
+name       : jtreg5
+version    : 5.1
+release    : 1
+source     :
+    - git|https://github.com/openjdk/jtreg.git : 527cc92a49014deb863d9d067a9e7995a328872a # jtreg5.1-b01
+license    : GPL-2.0-only WITH Classpath-exception-2.0
+summary    : Test harness for testing the JDK
+description: |
+    Test harness for testing the JDK, version 5.x for JDK 11
+component  : programming.java
+networking : yes
+builddeps  :
+    - openjdk-8
+    - wget
+environment: |
+    export JAVA_HOME=/usr/lib64/openjdk-8
+    export PATH=$JAVA_HOME/bin:$PATH
+
+    unset LD_PRELOAD
+setup      : |
+    %patch -p1 < $pkgfiles/git-tag-fix.patch
+
+    # Why does it hardcode these paths? Who knows
+    sed -i "s|/usr/bin/sort|/bin/sort|" make/Defs.gmk
+    sed -i "s|/usr/bin/touch|/bin/touch|" make/Defs.gmk
+build      : |
+    bash make/build-all.sh $JAVA_HOME
+install    : |
+    install -dm00755 $installdir/usr/share/jtreg5
+    cp -r --preserve=mode,timestamps build/images/jtreg/* $installdir/usr/share/jtreg5

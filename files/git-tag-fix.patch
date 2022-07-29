@@ -1,0 +1,24 @@
+From ace6d33a609e6bb47091d677ec53723d24b7b702 Mon Sep 17 00:00:00 2001
+From: Aleksey Shipilev <shade@openjdk.org>
+Date: Thu, 8 Jul 2021 06:02:31 +0000
+Subject: [PATCH] 7902987: Git build should record the actual tag, not the
+ latest one
+
+Reviewed-by: jjg
+---
+ make/build-all.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/make/build-all.sh b/make/build-all.sh
+index 150e58dc..46c4acee 100644
+--- a/make/build-all.sh
++++ b/make/build-all.sh
+@@ -84,7 +84,7 @@ get_root() {
+ get_tag_info() {
+    case $SCM_TYPE in
+        HG)  hg tags | grep jtreg | head -1 ;;
+-       GIT) git tag | grep jtreg | tail -1 ;;
++       GIT) git describe ;;
+        *) echo "Error: unknown SCM" >&2 ; exit 1 ;;
+    esac
+ }

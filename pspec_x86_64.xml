@@ -1,0 +1,56 @@
+<PISI>
+    <Source>
+        <Name>jtreg5</Name>
+        <Packager>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
+        </Packager>
+        <License>GPL-2.0-only WITH Classpath-exception-2.0</License>
+        <PartOf>programming.java</PartOf>
+        <Summary xml:lang="en">Test harness for testing the JDK</Summary>
+        <Description xml:lang="en">Test harness for testing the JDK, version 5.x for JDK 11
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>jtreg5</Name>
+        <Summary xml:lang="en">Test harness for testing the JDK</Summary>
+        <Description xml:lang="en">Test harness for testing the JDK, version 5.x for JDK 11
+</Description>
+        <PartOf>programming.java</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/jtreg5/COPYRIGHT</Path>
+            <Path fileType="data">/usr/share/jtreg5/LICENSE</Path>
+            <Path fileType="data">/usr/share/jtreg5/README</Path>
+            <Path fileType="data">/usr/share/jtreg5/bin/jtdiff</Path>
+            <Path fileType="data">/usr/share/jtreg5/bin/jtreg</Path>
+            <Path fileType="data">/usr/share/jtreg5/doc/jtreg/faq.html</Path>
+            <Path fileType="data">/usr/share/jtreg5/doc/jtreg/tag-spec.html</Path>
+            <Path fileType="data">/usr/share/jtreg5/doc/jtreg/usage.txt</Path>
+            <Path fileType="data">/usr/share/jtreg5/legal/asmtools/LICENSE</Path>
+            <Path fileType="data">/usr/share/jtreg5/legal/jcov/LICENSE</Path>
+            <Path fileType="data">/usr/share/jtreg5/legal/jtharness/copyright.txt</Path>
+            <Path fileType="data">/usr/share/jtreg5/legal/jtharness/license.txt</Path>
+            <Path fileType="data">/usr/share/jtreg5/legal/junit/LICENSE</Path>
+            <Path fileType="data">/usr/share/jtreg5/legal/testng/LICENSE</Path>
+            <Path fileType="data">/usr/share/jtreg5/lib/asmtools.jar</Path>
+            <Path fileType="data">/usr/share/jtreg5/lib/javatest.jar</Path>
+            <Path fileType="data">/usr/share/jtreg5/lib/jcommander.jar</Path>
+            <Path fileType="data">/usr/share/jtreg5/lib/jcov.jar</Path>
+            <Path fileType="data">/usr/share/jtreg5/lib/jcov_network_saver.jar</Path>
+            <Path fileType="data">/usr/share/jtreg5/lib/jtreg.jar</Path>
+            <Path fileType="data">/usr/share/jtreg5/lib/junit.jar</Path>
+            <Path fileType="data">/usr/share/jtreg5/lib/testng.jar</Path>
+            <Path fileType="data">/usr/share/jtreg5/release</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-07-27</Date>
+            <Version>5.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
+        </Update>
+    </History>
+</PISI>
